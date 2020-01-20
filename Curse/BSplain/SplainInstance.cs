@@ -28,8 +28,8 @@ namespace BSplain
             Multiplier = InputMultiplier;
             DelegateForm = WorkFiled =>
             {
-
-            }
+                throw new Exception("Using of unspecified splain is not allowed");
+            };
         }
     }
 }

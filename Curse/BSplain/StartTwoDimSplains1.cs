@@ -8,5 +8,6 @@ namespace BSplain
 {
     class StartTwoDimSplains1
     {
+        List<SplainInstance> TwoDimSplainStarterPack = new List<SplainInstance>();
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace lab5
+namespace MatrixProcessor
 {
-    static partial class Matrixes
+    public static partial class Matrixes
     {
         private static void DivString(double[,] target, int number, double Tar)
         {
