@@ -203,6 +203,56 @@ namespace BSplain
                 (
                     new SplainInstance
                     (
+                        1d / (144 * 144),
+                        Matrixes.TensorProduct(
+                        new double[,]
+                        {
+                             { -5,14,126,14,-5}
+                        },
+                        Matrixes.GetTransp(new double[,]
+                        {
+                             { -5,14,126,14,-5}
+                        }), false),
+                        "Двовим. Високочастотний S(3,1)"
+                    )
+                );
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    TwoDimSplainStarterPack[TwoDimSplainStarterPack.Count - 1].MatrixForm[i, j] *= -1;
+                }
+            }
+            TwoDimSplainStarterPack[TwoDimSplainStarterPack.Count - 1].MatrixForm[2, 2] = 4860;
+            TwoDimSplainStarterPack.Add
+                (
+                    new SplainInstance
+                    (
+                        1d / (6912 * 6912),
+                        Matrixes.TensorProduct(
+                        new double[,]
+                        {
+                             { 47,-240,249,6800,249,-240,47}
+                        },
+                        Matrixes.GetTransp(new double[,]
+                        {
+                             { 47,-240,249,6800,249,-240,47}
+                        }), false),
+                        "Двовим. Високочастотний S(3,2)"
+                    )
+                );
+            for (int i = 0; i < 7; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    TwoDimSplainStarterPack[TwoDimSplainStarterPack.Count - 1].MatrixForm[i, j] *= -1;
+                }
+            }
+            TwoDimSplainStarterPack[TwoDimSplainStarterPack.Count - 1].MatrixForm[3, 3] = 1535744;
+            TwoDimSplainStarterPack.Add
+                (
+                    new SplainInstance
+                    (
                         1d / (384 * 384),
                         Matrixes.TensorProduct(
                         new double[,]
