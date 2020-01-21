@@ -43,8 +43,8 @@
   <ItemGroup>
     <Compile Include="SplainInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StartSplains.cs" />
-    <Compile Include="StartTwoDimSplains1.cs" />
+    <Compile Include="StartSplines.cs" />
+    <Compile Include="StartTwoDimSplains.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MatrixProcessor\MatrixProcessor.csproj">

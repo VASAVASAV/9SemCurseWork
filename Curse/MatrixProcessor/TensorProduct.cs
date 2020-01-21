@@ -47,7 +47,7 @@ namespace MatrixProcessor
                         {
                             for (int l = 0; l < Size22; l++)
                             {
-                                result[i * Size11 + k, j * Size12 + l] = Target1[i, j] * Target2[k, l];
+                                result[i * Size21 + k, j * Size22 + l] = Target1[i, j] * Target2[k, l];
                             }
                         }
                     }

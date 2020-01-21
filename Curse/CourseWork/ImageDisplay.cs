@@ -11,6 +11,11 @@ namespace CourseWork
 {
     public partial class MainForm : Form
     {
+        void RefreshImage()
+        {
+            OutputBitmapOnPictureBox(BitmapConverter.DoubleRgbToBitmap(WorkingImage[WorkingImage.Count-1]));
+        }
+
         void OutputBitmapOnPictureBox(Bitmap image)
         {
             double Wreal = image.Width;

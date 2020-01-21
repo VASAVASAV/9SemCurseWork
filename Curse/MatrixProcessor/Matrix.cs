@@ -179,8 +179,10 @@ namespace MatrixProcessor
             return result;
         }
 
-        public static double[,] GetTransp(double[,] target, int Length1, int Length2)
+        public static double[,] GetTransp(double[,] target)
         {
+            int Length1 = target.GetUpperBound(0) + 1;
+            int Length2  = target.GetUpperBound(1) + 1;
             double[,] result = new double[Length2, Length1];
             int i, j;
             for (i = 0; i < Length1; i++)

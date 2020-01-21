@@ -25,10 +25,11 @@ namespace CourseWork
                 ImageName = Path.GetFileNameWithoutExtension(openFileWindow.FileName);
                 toolStripStatusLabel1.Text = ImageName;
 
+                LogOutputTextBox.Text += "Відкрито зображення \""+ ImageName + "\"\nШирина зображення :" + bmp.Width + "\nВисота зображення:" + bmp.Height+"\n";
                 //fill fields with image height and width
-               //textBox1.Text = String.Format("Ширина: {0}{2}Висота: {1}", bmp.Width, bmp.Height, Environment.NewLine);
-               //SubdivisionWidthTextBox.Text = bmp.Width.ToString();
-               //SubdivisionHeightTextBox.Text = bmp.Height.ToString();
+                //textBox1.Text = String.Format("Ширина: {0}{2}Висота: {1}", bmp.Width, bmp.Height, Environment.NewLine);
+                //SubdivisionWidthTextBox.Text = bmp.Width.ToString();
+                //SubdivisionHeightTextBox.Text = bmp.Height.ToString();
 
                 OutputBitmapOnPictureBox(bmp);
             }
