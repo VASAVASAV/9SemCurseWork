@@ -67,7 +67,7 @@ namespace CourseWork
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            int Number = listBox1.SelectedIndex;
+            int Number = listBox1.SelectedIndex; 
             textBox1.Text = ""+Kernels[Number].Multiplier;
             textBox2.Text = "" + Kernels[Number].Name;
             dataGridView1.Rows.Clear();
@@ -222,6 +222,11 @@ namespace CourseWork
             double[,,] Mat2 = WorkingImage[Num2 - 1];
             int height = Mat1.GetUpperBound(1) + 1;
             int width = Mat1.GetUpperBound(2) + 1;
+            if (height != Mat2.GetUpperBound(1) + 1 || width != Mat2.GetUpperBound(2) + 1)
+            {
+                LogOutputTextBox.Text += "Розміри версій не співпадають" + Environment.NewLine;
+                return; 
+            }
             double[,,] Eps = new double[3,height, width];
             double[] Mean = new double[3];
             for (int i = 0; i < height; i++)
@@ -422,6 +427,25 @@ namespace CourseWork
             WorkingImage.Add(result);
             RefreshImage();
             textBox4.Text = "" + WorkingImage.Count;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (WorkingImage.Count < 1)
+            {
+                LogOutputTextBox.Text += "Спочатку виберіть зображення" + Environment.NewLine;
+                return; 
+            }
+            switch (listBox4.SelectedItem)
+            {
+                case "2 рази":
+                    {
+                        int height = WorkingImage[WorkingImage.Count - 1].GetUpperBound(1) + 1;
+                        int width = WorkingImage[WorkingImage.Count - 1].GetUpperBound(2) + 1;
+                        double[,,] result = new double[3,height*2,width*2];
+                        break;
+                    }
+            }
         }
     }
 }

@@ -80,10 +80,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -97,6 +96,7 @@
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -306,6 +306,7 @@
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage6);
+            this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Location = new System.Drawing.Point(887, 49);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -454,10 +455,6 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.label11);
-            this.tabPage4.Controls.Add(this.textBox9);
-            this.tabPage4.Controls.Add(this.textBox8);
-            this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.button8);
             this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.textBox7);
@@ -472,7 +469,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(131, 127);
+            this.button8.Location = new System.Drawing.Point(131, 90);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(139, 72);
             this.button8.TabIndex = 7;
@@ -590,37 +587,39 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Введіть номера зображень (версій) які бажаете порівняти";
             // 
-            // textBox8
+            // tabPage7
             // 
-            this.textBox8.Location = new System.Drawing.Point(86, 246);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 9;
+            this.tabPage7.Controls.Add(this.button9);
+            this.tabPage7.Controls.Add(this.listBox4);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(427, 330);
+            this.tabPage7.TabIndex = 4;
+            this.tabPage7.Text = "SubDivision";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // listBox4
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(128, 202);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Розміри випадкової маски:";
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Items.AddRange(new object[] {
+            "2 рази",
+            "3/2 раза",
+            "1/2 раза",
+            "1/3 раза"});
+            this.listBox4.Location = new System.Drawing.Point(135, 0);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(165, 316);
+            this.listBox4.TabIndex = 2;
             // 
-            // textBox9
+            // button9
             // 
-            this.textBox9.Location = new System.Drawing.Point(217, 246);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 10;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(192, 249);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(19, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "на";
+            this.button9.Location = new System.Drawing.Point(3, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(126, 67);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "Збільшити кількість точок у ...";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // MainForm
             // 
@@ -655,6 +654,7 @@
             this.tabPage4.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -714,9 +714,8 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ListBox listBox4;
     }
 }
